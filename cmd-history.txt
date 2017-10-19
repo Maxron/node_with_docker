@@ -1,0 +1,23 @@
+ 9995  mkdir node_with_docker
+ 9998  cd node_with_docker
+10010  git init
+10011  git status
+10012  docker search node
+10014  npm init
+10015  code package.json
+10016  npm install --save express
+10021  code .gitignore
+10022  git status
+10023  rm -rf node_modules
+10026  code server.js
+10028  code .dockerignore
+10032  docker build -t weiko/node-web-app .
+10033  docker images
+10038  docker run --name node-web -p 49610:8080 -d weiko/node-web-app 
+10039  docker ps
+10040  docker logs node-web
+10041  docker exec -it node-web sh
+10044  curl -i localhost:49610
+10045  docker ps -a
+10046  docker stop node-web
+10047  docker rm node-web
